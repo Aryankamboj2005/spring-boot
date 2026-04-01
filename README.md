@@ -12,4 +12,4 @@ This project demonstrates the core concept of **Inversion of Control (IoC)** and
 3.  **Decoupling**: Instead of manual instantiation (`new HELLO()`), we let Spring handle the creation.
 
 ## Usage
-Run the `DemoApplication` class. It will output `Hello World!` to the console.
+Run the `DemoApplication` class. It will output `Hello World!` to the console, demonstrating that the object was successfully created and managed by Spring.
