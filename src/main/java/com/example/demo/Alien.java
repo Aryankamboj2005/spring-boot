@@ -11,9 +11,16 @@ public class Alien {
 
     // This is Constructor Injection
     // @Autowired // In modern Spring/Spring Boot, this is OPTIONAL if you only have one constructor
-    public Alien(Laptop lap) { 
-        System.out.println("Alien Object Created via Constructor Injection!");
-        this.lap = lap;
+//    public Alien(Laptop lap) {
+//        System.out.println("Alien Object Created via Constructor Injection!");
+//        this.lap = lap;
+//    }
+
+
+    // setter injection
+    @Autowired
+    public void  UseLaptop(Laptop lap) {
+        this.lap=lap;
     }
 
     public String hlo() {
