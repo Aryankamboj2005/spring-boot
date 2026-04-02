@@ -13,8 +13,8 @@ public class DemoApplication {
 //
 //		HELLO h = new HELLO();
 //		System.out.println(h.hlo());
-			HELLO h = context.getBean(HELLO.class); // we get the object of this class
-		    System.out.println(h.hlo());
+			Alien A = context.getBean(Alien.class); // we get the object of this class
+		    System.out.println(A.hlo());
 
 	}
 
