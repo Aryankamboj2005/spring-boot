@@ -7,7 +7,10 @@ import org.springframework.stereotype.Component;
 public class Alien {
     
     // You MUST declare the field here so the whole class can use it
-    private Laptop lap;
+    @Autowired
+    private computer comp; // as laptop is also the type of computer as laptop
+                          // implements the computer
+
 
     // This is Constructor Injection
     // @Autowired // In modern Spring/Spring Boot, this is OPTIONAL if you only have one constructor
@@ -18,15 +21,15 @@ public class Alien {
 
 
     // setter injection
-    @Autowired
-    public void  UseLaptop(Laptop lap) {
-        this.lap=lap;
-    }
+//    @Autowired
+//    public void  UseLaptop(Laptop lap) {
+//        this.lap=lap;
+//    }
 
     public String hlo() {
         // Now 'lap' will work because it was initialized in the constructor
-        lap.compile();
-        lap.debug();
+        comp.compile();
+        comp.debug();
         return "Working on awesome project";
     }
 }

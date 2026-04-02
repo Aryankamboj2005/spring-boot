@@ -3,7 +3,8 @@ package com.example.demo;
 import org.springframework.stereotype.Component;
 
 @Component // object created for the Laptop class
-public class Laptop {
+public class Laptop implements computer
+{
     public void compile(){
         System.out.println("Laptop compile");
     }
