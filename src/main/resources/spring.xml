@@ -6,11 +6,11 @@
 
     <!-- bean definitions here -->
 
-    <bean  id="alien" class="org.example.Alien" autowire="byName">
 
-<!--       In this we have autowire the the alien means link the alien
-            with that class wholes name should match with computer interface in the spring.xml file                  -->
+    <bean  id="alien" class="org.example.Alien" autowire="byType">
 
+<!--        check the class which implemets the computer , the class
+which implemets that class can run-->
 
 
 
@@ -40,10 +40,10 @@
 
 
     </bean>
-    <bean  id="computer" class="org.example.laptop">
+<!--    <bean  id="computer" class="org.example.laptop">-->
 
 
 
-    </bean>
+<!--    </bean>-->
     <bean  id="desktop" class="org.example.desktop"/>
 </beans>
