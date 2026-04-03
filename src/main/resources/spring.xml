@@ -40,10 +40,12 @@ which implemets that class can run-->
 
 
     </bean>
-<!--    <bean  id="computer" class="org.example.laptop">-->
+   <bean  id="computer" class="org.example.laptop"primary="true">
+<!--       if there is a class which tries call a implementation then this
+implementation runs mean this have the priority-->
 
 
 
-<!--    </bean>-->
+  </bean>-->
     <bean  id="desktop" class="org.example.desktop"/>
 </beans>
