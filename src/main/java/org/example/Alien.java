@@ -4,6 +4,7 @@ public class Alien {
      Alien(){
          System.out.println("Aliens here");
      }
+     private int salary;
     private int age ;
     public Alien(int age) {
         this.age = age;
@@ -13,6 +14,12 @@ public class Alien {
         this.name = name;
         this.age = age;
         System.out.println("Alien " + name + " is " + age);
+    }
+
+    public Alien(int age, int salary) {
+        this.age = age;
+        this.salary = salary;
+        System.out.println("Salary " + salary + " is " + age);
     }
 
     private laptop laptop;

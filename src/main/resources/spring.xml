@@ -19,11 +19,32 @@
          setters or the function we use
 
         -->
-        <constructor-arg value="14"></constructor-arg>
+<!--        <constructor-arg value="14"></constructor-arg>-->
         <!--
          This only work with the parametrized constructor
 
          -->
+
+
+
+
+
+
+
+        <!-- one method is this to set the values using the
+         parametrized coi structor when data types are same
+          public Alien(int age, int salary)
+          -->
+<!--        <constructor-arg name="age" value="25" />-->
+<!--        <constructor-arg name="salary" value="50000" />
+-->
+
+        <!-- Another is this-->
+          <constructor-arg index="0" value="25" />      <!-- This will go to 'age' -->
+        <constructor-arg index="1" value="50000" />   <!-- This will go to 'salary' -->
+
+
+
 
 
 
