@@ -22,7 +22,18 @@ public class Alien {
         System.out.println("Salary " + salary + " is " + age);
     }
 
-    private laptop laptop;
+
+
+    private Computer computer;
+
+
+    public Computer getComputer() {
+        return computer;
+    }
+
+    public void setComputer(Computer computer) {
+        this.computer = computer;
+    }
 
     public int getAge() {
         return age;
@@ -33,23 +44,11 @@ public class Alien {
     }
 
 
-    public laptop getLaptop() {
-        return laptop;
-    }
 
-    public void setLaptop(laptop laptop) {
-        this.laptop = laptop;
-    }
 
     public String hlo() {
 
         return "Working on awesome project";
-    }
-    public Alien(laptop laptop) {
-        System.out.println("you are insdie the laptop class");
-        this.laptop = laptop;
-        laptop.compile();
-
     }
 
 }

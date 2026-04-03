@@ -7,54 +7,13 @@
     <!-- bean definitions here -->
 
     <bean  id="alien" class="org.example.Alien">
-
-        <constructor-arg ref="laptop"></constructor-arg>
-
-
-<!--       <property name="age" value="21">
-          </property>   -->
-<!--           changing the age value using the spring frame work
-               this will change the value of the constant
-
--->
-
-        <!--  to change the value of the variable using the
-         setters or the function we use
-
-        -->
-<!--        <constructor-arg value="14"></constructor-arg>-->
-        <!--
-         This only work with the parametrized constructor
-
-         -->
-
-
-
-
-
-
-
-        <!-- one method is this to set the values using the
-         parametrized coi structor when data types are same
-          public Alien(int age, int salary)
-          -->
-<!--        <constructor-arg name="age" value="25" />-->
-<!--        <constructor-arg name="salary" value="50000" />
--->
-
-        <!-- Another is this-->
-<!--          <constructor-arg index="0" value="25" />      This will go to 'age'-->
-<!--        <constructor-arg index="1" value="50000" />   This will go to 'salary' -->
-        <property name="laptop" ref="laptop">
-<!--            as laptop is declared  as the object inside the
-               Alien class so we can initilize as folllow up and pass its refernce
-                   which is already decleared in the beam of the class and also
-                      we have to create the setterfor laptop
+        <property name="computer" ref="desktop">
+<!--         we have give the implementation (computer)  name as the
+                      computer in the Alien class so we use the computer here
+                       and reference is used to tell which computer should you use as it is
+                       implementation and is used by the 2 classes laptop and desktop
 
                       -->
-
-<!--             doing the same work for the constructor -->
-
         </property>
 
 
@@ -63,10 +22,7 @@
 
 
     </bean>
-
-<!--    this will make the object of the Alien class 2 times -->
     <bean  id="alien2" class="org.example.Alien">
-<!--        <property name="age" value="25" />-->
         <constructor-arg value="Aryan"></constructor-arg>
         <constructor-arg value="21"></constructor-arg>
         <!--
@@ -82,4 +38,5 @@
 
 
     </bean>
+    <bean  id="desktop" class="org.example.desktop"/>
 </beans>

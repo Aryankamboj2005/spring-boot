@@ -1,6 +1,6 @@
 package org.example;
 
-public class laptop {
+public class laptop implements Computer {
     laptop()
     {
         System.out.println("Innside the laptop class ");
