@@ -8,16 +8,36 @@
 
     <bean  id="alien" class="org.example.Alien">
 
-       <property name="age" value="21">
-<!--           changing the age value using the spring frame work-->
+<!--       <property name="age" value="21">
+          </property>   -->
+<!--           changing the age value using the spring frame work
+               this will change the value of the constant
 
-       </property>
+-->
+
+        <!--  to change the value of the variable using the
+         setters or the function we use
+
+        -->
+        <constructor-arg value="14"></constructor-arg>
+        <!--
+         This only work with the parametrized constructor
+
+         -->
+
+
 
     </bean>
 
 <!--    this will make the object of the Alien class 2 times -->
     <bean  id="alien2" class="org.example.Alien">
-        <property name="age" value="25" />
+<!--        <property name="age" value="25" />-->
+        <constructor-arg value="Aryan"></constructor-arg>
+        <constructor-arg value="21"></constructor-arg>
+        <!--
+         This only work with the parametrized constructor
+
+         -->
     </bean>
     <bean  id="laptop" class="org.example.laptop">
 
