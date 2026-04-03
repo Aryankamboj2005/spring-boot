@@ -7,7 +7,7 @@
     <!-- bean definitions here -->
 
 
-    <bean  id="alien" class="org.example.Alien" autowire="byType">
+    <bean  id="alien" class="org.example.Alien" autowire="byType"/>
 
 <!--        check the class which implemets the computer , the class
 which implemets that class can run-->
@@ -28,7 +28,7 @@ which implemets that class can run-->
 
 
 
-    </bean>
+
     <bean  id="alien2" class="org.example.Alien">
         <constructor-arg value="Aryan"></constructor-arg>
         <constructor-arg value="21"></constructor-arg>
@@ -40,12 +40,12 @@ which implemets that class can run-->
 
 
     </bean>
-   <bean  id="computer" class="org.example.laptop"primary="true">
+   <bean  id="computer" class="org.example.laptop" primary="true">
 <!--       if there is a class which tries call a implementation then this
 implementation runs mean this have the priority-->
 
 
 
-  </bean>-->
+  </bean>
     <bean  id="desktop" class="org.example.desktop"/>
 </beans>
