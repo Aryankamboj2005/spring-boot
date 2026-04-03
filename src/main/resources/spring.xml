@@ -8,6 +8,9 @@
 
     <bean  id="alien" class="org.example.Alien">
 
+        <constructor-arg ref="laptop"></constructor-arg>
+
+
 <!--       <property name="age" value="21">
           </property>   -->
 <!--           changing the age value using the spring frame work
@@ -40,8 +43,19 @@
 -->
 
         <!-- Another is this-->
-          <constructor-arg index="0" value="25" />      <!-- This will go to 'age' -->
-        <constructor-arg index="1" value="50000" />   <!-- This will go to 'salary' -->
+<!--          <constructor-arg index="0" value="25" />      This will go to 'age'-->
+<!--        <constructor-arg index="1" value="50000" />   This will go to 'salary' -->
+        <property name="laptop" ref="laptop">
+<!--            as laptop is declared  as the object inside the
+               Alien class so we can initilize as folllow up and pass its refernce
+                   which is already decleared in the beam of the class and also
+                      we have to create the setterfor laptop
+
+                      -->
+
+<!--             doing the same work for the constructor -->
+
+        </property>
 
 
 
@@ -59,6 +73,9 @@
          This only work with the parametrized constructor
 
          -->
+
+
+
     </bean>
     <bean  id="laptop" class="org.example.laptop">
 

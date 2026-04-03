@@ -32,9 +32,24 @@ public class Alien {
         this.age = age;
     }
 
+
+    public laptop getLaptop() {
+        return laptop;
+    }
+
+    public void setLaptop(laptop laptop) {
+        this.laptop = laptop;
+    }
+
     public String hlo() {
 
         return "Working on awesome project";
+    }
+    public Alien(laptop laptop) {
+        System.out.println("you are insdie the laptop class");
+        this.laptop = laptop;
+        laptop.compile();
+
     }
 
 }
