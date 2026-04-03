@@ -8,6 +8,19 @@
 
     <bean  id="alien" class="org.example.Alien">
 
+       <property name="age" value="21">
+<!--           changing the age value using the spring frame work-->
+
+       </property>
+
+    </bean>
+
+<!--    this will make the object of the Alien class 2 times -->
+    <bean  id="alien2" class="org.example.Alien">
+        <property name="age" value="25" />
+    </bean>
+    <bean  id="laptop" class="org.example.laptop">
+
 
 
     </bean>

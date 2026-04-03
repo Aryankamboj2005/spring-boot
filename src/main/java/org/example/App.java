@@ -1,28 +1,23 @@
 package org.example;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-@SpringBootApplication
-public class App 
-{
-    public static void main( String[] args )
-    {
-        // Initializing Spring Boot Application Context
-        ApplicationContext context = SpringApplication.run(App.class, args);
-        
-        // Fetching Alien bean (assuming it is now annotated with @Component)
-        Alien obj = context.getBean(Alien.class); 
-        System.out.println(obj.hlo());
+/**
+ * Hello world!
+ *
+ */
+public class App {
+    public static void main(String[] args) {
 
-        // Implementing Login Logic Demonstration
-        LoginService loginService = context.getBean(LoginService.class);
-        
-        // Case 1: Correct Credentials
-        loginService.authenticate("admin", "password123");
-        
-        // Case 2: Incorrect Credentials
-        loginService.authenticate("user", "wrong_pass");
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+
+        Alien obj1 = (Alien) context.getBean("alien");
+        System.out.println("Alien 1 Age: " + obj1.getAge());
+
+        Alien obj2 = (Alien) context.getBean("alien2");
+        System.out.println("Alien 2 Age: " + obj2.getAge());
+
+        System.out.println("Hello World!");
     }
 }
