@@ -6,15 +6,22 @@
 
     <!-- bean definitions here -->
 
-    <bean  id="alien" class="org.example.Alien">
-        <property name="computer" ref="desktop">
+    <bean  id="alien" class="org.example.Alien" autowire="byName">
+
+<!--       In this we have autowire the the alien means link the alien
+            with that class wholes name should match with computer interface in the spring.xml file                  -->
+
+
+
+
+<!--        <property name="computer" ref="desktop">-->
 <!--         we have give the implementation (computer)  name as the
                       computer in the Alien class so we use the computer here
                        and reference is used to tell which computer should you use as it is
                        implementation and is used by the 2 classes laptop and desktop
 
                       -->
-        </property>
+
 
 
 
@@ -33,7 +40,7 @@
 
 
     </bean>
-    <bean  id="laptop" class="org.example.laptop">
+    <bean  id="computer" class="org.example.laptop">
 
 
 
